@@ -88,3 +88,6 @@ SELECT * FROM estudiantes WHERE edad BETWEEN 20 AND 21;
 
 DELETE FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
+
+--UPDATE DE LA TABLA AGREGAR CORREO ELECTRONICO
+ALTER TABLE estudiantes ADD COLUMN correo varchar(100);
