@@ -71,3 +71,20 @@ UPDATE estudiantes SET edad = 20 WHERE curso = 'Base de Datos';
 UPDATE estudiantes SET apellidos = 'Cacuango' WHERE edad = 22;
 UPDATE estudiantes SET fecha_registro = '2025-05-20' WHERE apellidos = 'Cacuango';
 UPDATE estudiantes SET nombres = 'Sara Nohemi' WHERE edad BETWEEN 20 and 22;
+UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante = 1;
+
+--DELETE 5 EJEMPLOS
+DELETE FROM estudiantes WHERE id_estudiante = 2;
+SELECT * FROM estudiantes WHERE id_estudiante = 2;
+
+DELETE FROM estudiantes WHERE curso = 'Inteligencia Artificial';
+SELECT * FROM estudiantes WHERE curso = 'Inteligencia Artificial';
+
+DELETE FROM estudiantes WHERE apellidos = 'Cacuango';
+SELECT * FROM estudiantes WHERE apellidos = 'Cacuango';
+
+DELETE FROM estudiantes WHERE edad BETWEEN 20 AND 21;
+SELECT * FROM estudiantes WHERE edad BETWEEN 20 AND 21;
+
+DELETE FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
+SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
