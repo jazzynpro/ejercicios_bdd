@@ -52,7 +52,7 @@ SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
 
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
 
-SELECT * FROM estudiantes WHERE correo = 'correopendiente@outlook.com';
+
 
 
 UPDATE estudiantes SET curso = 'Desarrollo Web' WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
@@ -61,11 +61,8 @@ UPDATE estudiantes SET apellidos = 'Cacuango' WHERE edad = 22;
 UPDATE estudiantes SET fecha_registro = '2025-05-20' WHERE apellidos = 'Cacuango';
 UPDATE estudiantes SET nombres = 'Sara Nohemi' WHERE edad BETWEEN 20 and 22;
 UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante = 1;
+SELECT * FROM estudiantes;
 
-UPDATE estudiantes SET correo = 'correopendiente@outlook.com' WHERE curso = 'Desarrollo Web';
-UPDATE estudiantes SET fecha_registro = '2026-02-08' WHERE curso = 'Spring Boot';
-UPDATE estudiantes SET fecha_registro = '2026-03-15' WHERE edad BETWEEN 24 AND 25;
-UPDATE estudiantes SET curso = 'Programacion' WHERE curso = 'Programacion Java';
 
 DELETE FROM estudiantes WHERE id_estudiante = 2;
 SELECT * FROM estudiantes WHERE id_estudiante = 2;
@@ -82,13 +79,18 @@ SELECT * FROM estudiantes WHERE edad BETWEEN 20 AND 21;
 DELETE FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-06-01' AND '2026-08-01';
 
-DELETE FROM estudiantes WHERE curso = 'Desarrollo Web';
-SELECT * FROM estudiantes WHERE curso = 'Desarrollo Web';
+SELECT * FROM estudiantes;
 
-DELETE FROM estudiantes WHERE correo = 'alejandroj@gmail.com';
-SELECT * FROM estudiantes WHERE correo = 'alejandroj@gmail.com';
 
 ALTER TABLE estudiantes ADD COLUMN correo varchar(100);
+
+UPDATE estudiantes SET correo = 'correopendiente@outlook.com' WHERE curso = 'Desarrollo Web';
+SELECT * FROM estudiantes WHERE correo = 'correopendiente@outlook.com';
+
+
+UPDATE estudiantes SET fecha_registro = '2026-02-08' WHERE curso = 'Desarrollo Web';
+UPDATE estudiantes SET fecha_registro = '2026-03-15' WHERE edad BETWEEN 24 AND 27;
+UPDATE estudiantes SET curso = 'Programacion' WHERE curso = 'Desarrollo Web';
 
 SELECT * FROM estudiantes;
 
@@ -101,24 +103,23 @@ curso,
 fecha_registro,
 correo
 )values
-(1, 'Ricardo', 'Cevallos', 25, 'Base de Datos', '2026-01-01', 'ricardoc@gmail.com'),
+(1, 'Ricardo', 'Cevallos', 25, 'Base de Datos', '2026-02-01', 'ricardoc@gmail.com'),
 (2, 'Sofia', 'Mendoza', 22, 'Desarrollo Web', '2026-01-15', 'sofiam@hotmail.com'),
 (3, 'Mateo', 'Benitez', 20, 'Programacion Java', '2026-02-03', 'mateob@outlook.com'),
-(4, 'Valeria', 'Ruales', 24, 'Spring Boot', '2026-02-10', 'valeriar@gmail.com'),
-(5, 'Carlos', 'Ortega', 27, 'Base de Datos', '2026-03-01', 'carloso@hotmail.com'),
-(6, 'Lucia', 'Paredes', 19, 'Desarrollo Web', '2026-03-12', 'luciap@outlook.com'),
-(7, 'Daniel', 'Viteri', 23, 'Programacion Java', '2026-04-05', 'danielv@gmail.com'),
-(8, 'Camila', 'Andrade', 21, 'Spring Boot', '2026-04-20', 'camilaa@hotmail.com'),
-(9, 'Esteban', 'Narvaez', 26, 'Base de Datos', '2026-05-02', 'estebann@outlook.com'),
+(8, 'Camila', 'Andrade', 21, 'Spring Boot', '2026-03-15', 'camilaa@hotmail.com'),
+(9, 'Esteban', 'Narvaez', 26, 'Base de Datos', '2026-05-01', 'estebann@outlook.com'),
 (10, 'Gabriela', 'Toapanta', 22, 'Desarrollo Web', '2026-05-18', 'gabrielat@gmail.com'),
 (11, 'Andres', 'Grijalva', 25, 'Programacion Java', '2026-06-01', 'andresg@hotmail.com'),
 (12, 'Fernanda', 'Lara', 20, 'Spring Boot', '2026-06-14', 'fernandal@outlook.com'),
 (13, 'Alejandro', 'Jarrin', 28, 'Base de Datos', '2026-07-03', 'alejandroj@gmail.com'),
-(14, 'Daniela', 'Moreano', 23, 'Desarrollo Web', '2026-07-22', 'danielam@hotmail.com'),
+(14, 'Daniela', 'Moreano', 23, 'Programacion', '2026-01-01', 'danielam@hotmail.com'),
 (15, 'Sebastian', 'Perez', 24, 'Programacion Java', '2026-08-01', 'sebastianp@outlook.com');
+
 
 SELECT * FROM estudiantes WHERE fecha_registro > '2026-02-01';
 SELECT * FROM estudiantes WHERE fecha_registro < '2026-05-01';
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-05-02' AND '2026-08-20';
 SELECT * FROM estudiantes WHERE fecha_registro = '2026-03-15';
 SELECT * FROM estudiantes WHERE curso = 'Programacion' and fecha_registro > '2026-01-01';
+
+
